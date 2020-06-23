@@ -18,7 +18,7 @@ class Auth
     {
 
         if (!FacadesAuth::check()) {
-            return redirect()->route('auth.sign-up');
+            return redirect(route('auth.sign-in'));
         }
         return $next($request);
     }
