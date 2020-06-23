@@ -13,7 +13,6 @@ class SignUpController extends Controller
 
     public function  __construct(SignupService $signupService)
     {
-
         $this->signupService = $signupService;
     }
 
