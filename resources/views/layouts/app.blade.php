@@ -24,12 +24,15 @@
             <li class="nav-item">
             <a class="nav-link" href="{{route('auth.sign-in')}}">Sign in</a>
             </li>
+            @if (Auth::check())
             <li class="nav-item">
               <a class="nav-link" href="{{route('auth.sign-out')}}">Sign out</a>
             </li>
+            @else
             <li class="nav-item">
-            <a class="nav-link" href="{{route('auth.sign-up')}}">Regester</a>
-            </li>
+              <a class="nav-link" href="{{route('auth.sign-up')}}">Regester</a>
+              </li>
+            @endif
             <li class="nav-item">
               <a class="nav-link" href="{{route('series.index')}}">Series</a>
             </li>
